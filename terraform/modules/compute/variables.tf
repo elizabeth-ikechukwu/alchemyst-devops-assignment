@@ -38,7 +38,7 @@ variable "vm2_instance_type" {
 variable "vm3_instance_type" {
   description = "Instance type for VM3 (inference worker)"
   type        = string
-  default     = "t3.medium"
+  default     = "t3.micro"
 }
 
 variable "engine_repo_url" {
