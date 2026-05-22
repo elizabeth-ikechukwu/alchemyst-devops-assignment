@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  caller-worker:
+    image: lizzycloudlab/iii-caller-worker:latest
+    container_name: iii-caller-worker
+    restart: unless-stopped
+    environment:
+      - III_URL=ws://ENGINE_PRIVATE_IP:49134

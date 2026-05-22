@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  inference-worker:
+    image: lizzycloudlab/iii-inference-worker:latest
+    container_name: iii-inference-worker
+    restart: unless-stopped
+    environment:
+      - III_URL=ws://ENGINE_PRIVATE_IP:49134
