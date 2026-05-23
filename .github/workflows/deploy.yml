@@ -76,6 +76,7 @@ jobs:
           context: .
           file: docker/engine/Dockerfile
           push: true
+          no-cache: true
           tags: ${{ needs.provision-ecr.outputs.engine_repo_url }}:latest
 
       - name: Build and push caller worker image
@@ -84,6 +85,7 @@ jobs:
           context: .
           file: docker/caller-worker/Dockerfile
           push: true
+          no-cache: true
           tags: ${{ needs.provision-ecr.outputs.caller_repo_url }}:latest
 
       - name: Build and push inference worker image
@@ -92,6 +94,7 @@ jobs:
           context: .
           file: docker/inference-worker/Dockerfile
           push: true
+          no-cache: true
           tags: ${{ needs.provision-ecr.outputs.inference_repo_url }}:latest
 
   deploy-infrastructure:
